@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="417.0" prefWidth="519.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.AddContractController">
+  <children>
+    <Label fx:id="title" layoutX="36.0" layoutY="16.0" prefHeight="43.0" prefWidth="376.0" styleClass="label-header" text="Add new contract">
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </Label>
+    <Label id="speedLabel" layoutX="36.0" layoutY="90.0" prefHeight="19.0" prefWidth="143.0" text="Speed:" textAlignment="LEFT">
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </Label>
+    <Label id="thresholdLabel" layoutX="36.0" layoutY="128.0" prefHeight="19.0" prefWidth="143.0" text="Threshold:" textAlignment="LEFT">
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </Label>
+    <Label id="durationLabel" layoutX="36.0" layoutY="165.0" prefHeight="19.0" prefWidth="143.0" text="Contract duration:">
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </Label>
+    <Label id="nameLabel" layoutX="36.0" layoutY="206.0" prefHeight="19.0" prefWidth="143.0" text="Customer name:" textAlignment="LEFT">
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </Label>
+    <Label id="addressLabel" layoutX="35.0" layoutY="246.0" prefHeight="19.0" prefWidth="143.0" text="Customer address:">
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </Label>
+    <ChoiceBox fx:id="speedChoice" layoutX="192.0" layoutY="89.0" opacity="1.0" prefHeight="20.0" prefWidth="107.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="2 Mbps" />
+          <String fx:value="5 Mbps" />
+          <String fx:value="10 Mbps" />
+          <String fx:value="20 Mbps" />
+          <String fx:value="50 Mbps" />
+          <String fx:value="100 Mbps" />
+        </FXCollections>
+      </items>
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </ChoiceBox>
+    <ChoiceBox fx:id="thresholdChoice" layoutX="192.0" layoutY="127.0" prefHeight="20.0" prefWidth="107.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="1 GB" />
+          <String fx:value="5 GB" />
+          <String fx:value="10 GB" />
+          <String fx:value="100 GB" />
+          <String fx:value="FLAT" />
+        </FXCollections>
+      </items>
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </ChoiceBox>
+    <ChoiceBox fx:id="durationChoice" layoutX="192.0" layoutY="164.0" prefHeight="20.0" prefWidth="107.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="1 Year" />
+          <String fx:value="2 Years" />
+        </FXCollections>
+      </items>
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </ChoiceBox>
+    <TextField fx:id="nameField" layoutX="192.0" layoutY="204.0" prefHeight="21.0" prefWidth="281.0" />
+    <TextField fx:id="addressField" layoutX="192.0" layoutY="244.0" prefHeight="21.0" prefWidth="281.0" />
+    <Label fx:id="msgLabel" layoutX="35.0" layoutY="281.0" prefHeight="19.0" prefWidth="143.0" styleClass="msgLabel" text="" textAlignment="LEFT">
+      <stylesheets>
+        <URL value="@style.css" />
+      </stylesheets>
+    </Label>
+    <Button fx:id="okBtn" defaultButton="true" layoutX="36.0" layoutY="323.0" mnemonicParsing="false" onAction="#addContract" text="OK" />
+    <Button fx:id="cancelBtn" cancelButton="true" layoutX="192.0" layoutY="323.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>
